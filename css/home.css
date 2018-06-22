@@ -1,0 +1,387 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway",sans-serif;
+}
+
+body {
+  margin-top: 85px;
+}
+
+a,
+a:hover
+ {
+  text-decoration: none;
+  color: black;
+}
+
+h3 {
+  margin: 20px;
+}
+
+h4 {
+  margin: 20px;
+  margin-top: 50px;
+
+}
+
+/* links to black signs */
+a.anchor {
+  display: block;
+  position: relative;
+  top: -300px;
+  visibility: hidden;
+}
+
+
+.black-bar {
+  background-color: rgb(8,8,8);
+  color: white;
+  font-size: 1.2em;
+}
+
+.icon
+ {
+  color: white;
+  font-size: 3em;
+}
+
+/* .navbar {
+  margin-top: 31px;
+} */
+
+.navbar-nav {
+  float: right;
+}
+
+
+.bg-dark {
+  background-color:rgb(28, 28, 28)!important;
+}
+
+.btn-dark {
+  background-color: rgb(28,28,28)!important;
+  color: white;
+}
+
+.navbar-brand {
+  font-weight: 300;
+  color: white!important;
+  font-size: 2.5em;
+  display: block;
+}
+
+.navbar-toggler-icon {
+  color: white!important;
+}
+
+.small-header {
+  font-size: .75em;
+  margin: 0;
+  padding-bottom: 0;
+}
+
+hr {
+  background-color: black;
+  margin: 0;
+}
+
+.black-line {
+  border-top: 1px solid black;
+
+}
+
+.black-sign {
+  background-color: rgb(0,0,0);
+  color: white;
+  padding: 25px;
+  margin-bottom: 50px;
+  font-size: 3.5em;
+  font-family: "Playfair Display", serif;
+  letter-spacing: .05in;
+}
+
+button:focus {
+  outline: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+table {
+  background-color: #F8F8FA !important;
+}
+
+/* lightbox and overlays */
+.ekko-lightbox-nav-overlay {
+  z-index: 100000!important;
+}
+
+.ekko-lightbox .ekko-lightbox-container {
+  overflow: hidden !important;
+  -webkit-transition: width 300ms ease-in-out, height 300ms ease-in-out !important;
+  -moz-transition: width 300ms ease-in-out, height 300ms ease-in-out !important;
+  -o-transition: width 300ms ease-in-out, height 300ms ease-in-out !important;
+  transition: width 300ms ease-in-out, height 300ms ease-in-out !important;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.7); /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  height: 100%;
+  transition: .2s ease;
+  opacity:0;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.overlay-container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  position: relative;
+  transform: translateY(-50%);
+  top: 50%;
+  padding: 5px;
+
+}
+
+.overlay-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.center {
+  margin: 0 auto!important;
+}
+
+.home-photo {
+  height: 100%;
+  width: 100%;
+}
+
+
+.image {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.image:hover {
+  -webkit-filter: brightness(40%);
+  -webkit-transition: all .1s linear;
+  -moz-transition: all .1s linear;
+  -o-transition: all .1s linear;
+  -ms-transition: all .1s linear;
+  transition: all .1s linear;
+}
+
+.img-border {
+    padding: .25rem;
+    background-color: #f0f0f0;
+    border: 1px solid #f0efef;
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* about */
+.articles {
+  line-height: 1.8;
+}
+
+.lang-control {
+  margin-bottom: 30px;
+}
+
+.eng {
+  margin-right: 5px;
+}
+
+.kor {
+  margin-left: 5px;
+}
+
+.korean {
+  margin-bottom: 30px;
+}
+
+.event {
+  font-weight: 700;
+}
+
+/* itinerary */
+.details {
+  color: rgb(175, 174, 174);
+}
+
+.pic-margin-first {
+  margin-bottom: 3rem;
+}
+
+.pic-margin-both {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+/* discography */
+.disc {
+  width: 100%;
+}
+
+.gallery-space {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+footer,
+.footer {
+  background-color: black;
+  color: white;
+  margin-bottom: 0;
+  padding: 5px 0;
+  font-size: .90em;
+}
+
+.white {
+  color: white;
+}
+
+
+@media (max-width: 320px) {
+  /* Smaller header for iPhone SE */
+  .navbar-brand {
+    font-size: 2em;
+  }
+
+  a.anchor {
+    display: block;
+    position: relative;
+    top: -290px;
+    visibility: hidden;
+  }
+}
+
+/* prevents cut off of home photo in header with really small widths */
+@media (max-width:750px) {
+
+  .black-sign {
+    background-color: black;
+    color: white;
+    padding: 25px;
+    margin-bottom: 50px;
+    font-size: 2em;
+    font-family: "Playfair Display", serif;
+    letter-spacing: .05in;
+  }
+
+}
+
+/* smaller space for smaller screens in itinerary photos */
+@media (max-width: 769px) {
+  .pic-margin-first {
+  margin-bottom: .5rem;
+}
+
+.pic-margin-both {
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+}
+
+.small-none {
+  display: none;
+}
+}
+
+@media (min-width: 992px) {
+
+  body {
+    margin-top: 0;
+  }
+
+  .main-header,
+  .main-nav {
+    display: flex;
+    padding: 10px 30px;
+    list-style: none;
+    text-decoration: none;
+    z-index: 100;
+    color: white;
+  }
+
+  .nav-class {
+    color: white;
+  }
+
+
+  .desktop-nav {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    width: 100%;
+  }
+
+
+  .navbar {
+    display: none;
+  }
+
+  .small-nav {
+    position: fixed;
+    top:0;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 100;
+    width: 100%;
+    font-size: 1em;
+    /* margin-top: 31px; */
+  }
+
+  .main-nav {
+    margin-bottom: 0;
+  }
+
+  .main-header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .space {
+    margin: 0 30px;
+  }
+
+  .less-space {
+    margin: 0 20px;
+  }
+
+  .name{
+    font-size: 6em;
+  }
+
+  a {
+    color: black;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: rgb(82, 82, 82);
+    text-decoration: none;
+  }
+
+  /* links to black signs. These two are repeats of the ones not inside a media query, and they work to fix the desktop screen sizes */
+  a.anchor {
+    display: block;
+    position: relative;
+    top: -95px;
+    visibility: hidden;
+  }
+
+
+}
