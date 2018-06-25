@@ -12,7 +12,7 @@ $(function() {
 
 //fixes glitch where on refresh if you are at the top of the page after the big header, the small header does not show up without scrolling
 var myFunction = function() {
-  if($(window).scrollTop() > 188 &&  $(window).scrollTop() < 999) {
+  if($(window).scrollTop() > 188 &&  $(window).scrollTop() < 1644) {
     fixedHeader();
   }
 }
@@ -62,15 +62,24 @@ $(".kor").click(function(){
   $(".english").hide();
 });
 
-  //when clicking an input button
-  $("input").click(function(event) {
-    //hide every tour date year except the one clicked
-    for(var i = 10; i <= 18; i++) {
-      $(".20" + i + "-itinerary").hide();
-    }
-    $("." + $(this).val() + "-itinerary").show();
-    //change the title of the year
-    $("#year").html($(this).val());
+//when clicking an itinerary button
+$(".itin-btn").click(function() {
+  //hide all tour dates
+  for(var i = 10; i <= 18; i++) {
+    $(".20" + i + "-itinerary").hide();
+  }
+  //show only the tour year clicked
+  $("." + $(this).text() + "-itinerary").show();
+  $("#year").html($(this).text());
+});
+
+//smooth scrolling when clicking on a link
+$(document).on('click', 'a[href^="#"]', function (event) {
+  event.preventDefault();
+
+  $('html, body').animate({
+      scrollTop: $($.attr(this, 'href')).offset().top
+  }, 300);
 });
 
 //activate lightbox
