@@ -9,6 +9,41 @@ body {
   margin-top: 74px;
 }
 
+th,
+td,
+table {
+  background-color: #212529;
+  border-color: #32383e!important;
+  color: lightgray;
+}
+
+.featherlight-content {
+  width: 85%;
+  height:80%;
+  border-top: 10px solid white;
+}
+
+.featherlight .featherlight-close-icon {
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+.close {
+  color: black;
+  font-size: 2rem;
+}
+
+.icon-thumb {
+  display: block;
+  margin: 0 auto;
+}
+
+.block {
+  display: block;
+}
+
+/* EXPERIMENTAL*/
+
 .icon-small {
   max-width: 2.5rem;
   height: auto;
@@ -139,7 +174,7 @@ table {
   position: absolute;
   top: 0;
   background: rgb(0, 0, 0);
-  background: rgba(0, 0, 0, 0.7); /* Black see-through */
+  background: rgba(0, 0, 0, 0); /* Black see-through */
   color: #f1f1f1;
   width: 100%;
   height: 100%;
@@ -154,7 +189,7 @@ table {
 }
 
 .text {
-  color: white;
+  color: rgba(0, 0, 0, 0);
   position: relative;
   transform: translateY(-50%);
   top: 50%;
@@ -194,7 +229,7 @@ table {
 }
 
 .image:hover {
-  -webkit-filter: brightness(40%);
+  -webkit-filter: brightness(100%);
   -webkit-transition: all .1s linear;
   -moz-transition: all .1s linear;
   -o-transition: all .1s linear;
@@ -271,7 +306,7 @@ footer {
 }
 
 
-@media (min-%width: 750px) {
+@media (min-width: 750px) {
   /* Smaller header for iPhone SE */
 
   .navbar-brand {
@@ -305,6 +340,53 @@ footer {
 .small-none {
   display: block;
 }
+
+}
+
+/* START HOVERING EFFECTS FOR LARGER SCREENS I.E. NOT SMARTPHONES */
+@media (min-width: 850px) {
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.7); /* Black see-through */
+    color: #f1f1f1;
+    width: 100%;
+    height: 100%;
+    transition: .2s ease;
+    opacity:0;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .overlay-container:hover .overlay {
+    opacity: 1;
+  }
+
+  .text {
+    color: white;
+    position: relative;
+    transform: translateY(-50%);
+    top: 50%;
+    padding: 5px;
+
+  }
+
+  .overlay-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .image:hover {
+    -webkit-filter: brightness(40%);
+    -webkit-transition: all .1s linear;
+    -moz-transition: all .1s linear;
+    -o-transition: all .1s linear;
+    -ms-transition: all .1s linear;
+    transition: all .1s linear;
+  }
 
 }
 
@@ -407,5 +489,16 @@ footer {
     top: -130px;
     visibility: hidden;
   }
+
+  /* EXPERIMENTAL*/
+  .icon-thumb {
+    display: inline;
+  }
+
+  /* .featherlight-content {
+    width: 50%;
+    height:60%;
+    border-top: 25px solid white;
+  } */
 
 }
