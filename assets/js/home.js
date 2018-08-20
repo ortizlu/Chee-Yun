@@ -1,8 +1,7 @@
-
-
 //once the document is ready hide korean and display only english
 //also hide all other tour dates except 2018
 $(function() {
+  $(".english").hide();
   $(".korean").hide();
   for(var i = 10; i < 18; i++) {
     $(".20" + i + "-itinerary").hide();
@@ -10,46 +9,58 @@ $(function() {
   $(".2018-itinerary").show();
 })
 
-//fixes glitch where on refresh if you are at the top of the page after the big header, the small header does not show up without scrolling
+// fixes glitch where on refresh if you are at the top of the page after the big header, the small header does not show up without scrolling
 var myFunction = function() {
-  if($(window).scrollTop() > 188 &&  $(window).scrollTop() < 1644) {
-    fixedHeader();
+  if($(window).width() > 992) {
+    if($(window).scrollTop() === 0) {
+      unfixedHeader();
+    } else if($(window).scrollTop() > 188 &&  $(window).scrollTop() < 1644) {
+      fixedHeader();
+    }
   }
 }
 
-//fixed or unfixed header depending on where you are in the page
-function fixedHeader() {
-  $('.desktop-nav').addClass('small-nav');
-  $('#name').removeClass('name');
-  $('.main-nav').addClass('small-header');
+window.onload = myFunction;
 
-  $('#home-nav, #about-nav, #itinerary-nav, #discography-nav, #gallery-nav, #contact-nav').removeClass('space');
-  $('#home-nav, #about-nav, #itinerary-nav, #discography-nav, #gallery-nav, #contact-nav').addClass('less-space');
+// fixed or unfixed header depending on where you are in the page
+function fixedHeader() {
+  $(".navbar-brand").css("font-size", "2rem");
+  $(".nav-link").css("font-size", "1rem");
+  $(".nav-link").css("margin", "0 2px");
 }
 
 function unfixedHeader() {
-  $('.desktop-nav').removeClass('small-nav');
-  $('#name').addClass('name');
-  $('.main-nav').removeClass('small-header');
-
-
-  $('#home-nav, #about-nav, #itinerary-nav, #discography-nav, #gallery-nav, #contact-nav').addClass('space');
-  $('#home-nav, #about-nav, #itinerary-nav, #discography-nav, #gallery-nav, #contact-nav').removeClass('less-space');
+  $(".navbar-brand").css("font-size", "6rem");
+  $(".nav-link").css("font-size", "1.2rem");
+  $(".nav-link").css("margin", "0 12px");
 }
 
-//starts glitch fix when window refreshes
-window.onload = myFunction;
-
-//if the window is scrolled more than the desktop header
-//classes are applied to shrink the header making a small desktop header throughout the page
+//check for scrolling
 $(window).scroll(function(){
-  if ($(window).scrollTop() >= 188) {
-    fixedHeader();
-  } else {
+  //if width greater than 992
+  if($(window).width() > 992) {
+    //if scrolling greater than 188
+    if ($(window).scrollTop() >= 188) {
+      //change header to smaller font
+      fixedHeader();
+    } else {
+    //change header to larger font
     unfixedHeader();
     }
+  }
 });
 
+//check for window width resize
+$(window).resize(function() {
+  //if width is more than 992px
+  if($(window).width() > 992) {
+    //change header to larger font
+    unfixedHeader();
+  } else {
+    //change header to smaller font
+    fixedHeader();
+  }
+});
 
 //on button click, alternate between english and korean
 $(".eng").click(function(){
