@@ -81,7 +81,8 @@ header {
 	position: relative;
 	justify-content: center;
 	text-align: center;
-	min-height: 100vh;
+  height: 100vh;
+  max-height: 100vh;
 }
 
 .hero .background-image {
