@@ -32,7 +32,7 @@ var itin2019 = [{
   conductor: 'Richard McKay',
   presenter: 'Dallas Chamber Symphony',
   venue: 'Moody Performance Hall',
-  link: 'http://westmorelandsymphony.org/performances/',
+  link: 'https://www.dealyte.com/deal/violinist-chee-yun-plays-the-four-seasons--moody-performance-hall/3129400',
   location: 'Dallas, TX'
 },
 {

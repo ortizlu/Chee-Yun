@@ -198,6 +198,15 @@ var itin2018 = [{
   location: 'South Korea'
 },
 {
+  event: 'September 12',
+  title: 'Violin &amp Piano Recital',
+  conductor: '',
+  presenter: '',
+  venue: 'Gyeonggi Arts Center',
+  link: '',
+  location: 'South Korea'
+},
+{
   event: 'September 26 &amp 28',
   title: 'Residency Activity',
   conductor: '',
