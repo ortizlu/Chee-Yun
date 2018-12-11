@@ -243,6 +243,15 @@ var itin2018 = [{
   location: 'Reno, NV'
 },
 {
+  event: 'December 28',
+  title: 'Duets and Quintets & Chamber Music through the Ages',
+  conductor: '',
+  presenter: 'Nevada Chamber Music Festival',
+  venue: 'South Reno United Methodist Church',
+  link: 'http://www.renochamberorchestra.org/ncmf-2018-schedule/',
+  location: 'Reno, NV'
+},
+{
   event: 'December 29',
   title: 'A Continental Tour & Centennial Celebrations',
   conductor: '',
