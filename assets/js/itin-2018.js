@@ -232,4 +232,31 @@ var itin2018 = [{
   venue: 'Kreeger Auditorium',
   link: 'https://www.benderjccgw.org/event/chee-yun/',
   location: 'Rockville, MD'
+},
+{
+  event: 'December 27',
+  title: 'Baroque by Candlelight I & II: Violin Virtuosi & Perfect Pairings',
+  conductor: '',
+  presenter: 'Nevada Chamber Music Festival',
+  venue: 'Trinity Episcopal Cathedral',
+  link: 'http://www.renochamberorchestra.org/ncmf-2018-schedule/',
+  location: 'Reno, NV'
+},
+{
+  event: 'December 29',
+  title: 'A Continental Tour & Centennial Celebrations',
+  conductor: '',
+  presenter: 'Nevada Chamber Music Festival',
+  venue: 'South Reno United Methodist Church',
+  link: 'http://www.renochamberorchestra.org/ncmf-2018-schedule/',
+  location: 'Reno, NV'
+},
+{
+  event: 'December 30',
+  title: 'Fantasy and Flair & Undiscovered Grieg',
+  conductor: '',
+  presenter: 'Nevada Chamber Music Festival',
+  venue: 'Nightingale Concert Hall',
+  link: 'http://www.renochamberorchestra.org/ncmf-2018-schedule/',
+  location: 'Reno, NV'
 }]
