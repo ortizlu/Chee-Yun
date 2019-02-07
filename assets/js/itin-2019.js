@@ -1,4 +1,4 @@
-var itin2019 = [
+const itin2019 = [
   {
     event: 'February 2',
     title: 'Mendelssohn: Violin Concerto',
@@ -7,7 +7,7 @@ var itin2019 = [
     venue: 'Center For the Arts – George Mason University',
     link:
       'http://www.fairfaxsymphony.org/february-2-mendelssohn-schumann-chee-yun-violin/',
-    location: 'Fairfax, VA'
+    location: 'Fairfax, VA',
   },
   {
     event: 'February 9',
@@ -16,7 +16,7 @@ var itin2019 = [
     presenter: 'Johnson City Symphony',
     venue: 'Mary B. Martin Auditorium, Seeger Chapel',
     link: 'https://www.jcsymphony.com/events',
-    location: 'Johnson City, TN'
+    location: 'Johnson City, TN',
   },
   {
     event: 'February 16',
@@ -25,7 +25,7 @@ var itin2019 = [
     presenter: 'Westmoreland Symphony Orchestra',
     venue: 'Westmoreland Cultural Trust - The Palace Theatre',
     link: 'http://westmorelandsymphony.org/performances/',
-    location: 'Greensburg, PA'
+    location: 'Greensburg, PA',
   },
   {
     event: 'February 19',
@@ -35,13 +35,13 @@ var itin2019 = [
     venue: 'Moody Performance Hall',
     link:
       'https://www.dealyte.com/deal/violinist-chee-yun-plays-the-four-seasons--moody-performance-hall/3129400',
-    location: 'Dallas, TX'
+    location: 'Dallas, TX',
   },
   {
-    event: 'March 17',
+    event: 'March 16 & 17',
     title: 'Chamber Music Concert',
     venue: 'Charles Wadsworth Auditorium',
-    location: 'Newman, GA'
+    location: 'Newman, GA',
   },
   {
     event: 'March 21-23',
@@ -51,7 +51,7 @@ var itin2019 = [
     venue: 'Laura Turner Hall',
     link:
       'https://www.nashvillesymphony.org/tickets/concert/2018-2019-season/spanish-nights-coffee-and-classics-2019/',
-    location: 'Nashville, TN'
+    location: 'Nashville, TN',
   },
   {
     event: 'April 6 & 7',
@@ -61,7 +61,7 @@ var itin2019 = [
     venue: 'Palace Theatre',
     link:
       'http://www.albanysymphony.com/upcomingconcerts/tchaikovskyviolinconcerto',
-    location: 'Albany, NY'
+    location: 'Albany, NY',
   },
   {
     event: 'April 11-15',
@@ -70,6 +70,70 @@ var itin2019 = [
     presenter: '',
     venue: '',
     link: '',
-    location: 'Beaufort, SC'
-  }
+    location: 'Beaufort, SC',
+  },
+  {
+    event: 'May 15',
+    title: 'A Musical Soiree',
+    conductor: '',
+    presenter: 'Innsbrook Institute',
+    venue: 'Innsbrook Institute',
+    link: 'https://innsbrookinstitute.org/upcoming-events/',
+    location: 'Innsbrook, MO',
+  },
+  {
+    event: 'May 30 & 31',
+    title:
+      'Beethoven Triple Concerto (with Younghoon Song, cello & Jae-Hyuck Cho, piano)',
+    conductor: 'Massimo Zanetti',
+    presenter: 'Gyeonghi Philharmonic orchestra',
+    venue: 'Gyeonghi Arts Center',
+    link: '',
+    location: 'Suwon, Korea',
+  },
+  {
+    event: 'June 7-16',
+    title: 'Summer Music Festival and Academy',
+    conductor: '',
+    presenter: 'Innsbrook Institute',
+    venue: 'Innsbrook Institute',
+    link: 'https://innsbrookinstitute.org/upcoming-events/',
+    location: 'Innsbrook, MO',
+  },
+  {
+    event: 'June 19-22',
+    title: 'Brevard Music Center Summer Festival (Tchaikovsky)',
+    conductor: 'JoAnn Falletta',
+    presenter: 'Brevard Music Center',
+    venue: 'Brevard Music Center',
+    link: 'https://www.brevardmusic.org/institute/repertoire/#bmco',
+    location: 'Brevard, NC',
+  },
+  {
+    event: 'July 9-15',
+    title: 'Mozart sinfonia Concertante',
+    conductor: '',
+    presenter: 'Rockport Festival',
+    venue: 'Shalin Liu Performance Center',
+    link: '',
+    location: 'Rockport, MA',
+  },
+  {
+    event: 'July 20 - August 3',
+    title: 'Chee-Yun and Friends',
+    conductor: '',
+    presenter: 'San Domenico School',
+    venue: 'San Domenico School & Conservatory',
+    link: 'http://www.sdfestival.org/',
+    location: 'San Anselmo, CA',
+  },
+  {
+    event: 'August 4-17',
+    title: 'Chausson Concerto',
+    conductor: '',
+    presenter: 'Orcas Island Chamber Music Festival',
+    venue: 'Orcas Center',
+    link: 'http://www.sdfestival.org/',
+    location: 'Eastsound, WA',
+  },
 ];
