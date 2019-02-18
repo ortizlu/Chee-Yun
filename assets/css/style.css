@@ -200,6 +200,7 @@ a.anchor {
 .featherlight-content {
   width: 85%;
   height: 80%;
+  max-width: 600px;
   border-top: 10px solid white;
 }
 
@@ -244,6 +245,21 @@ a.anchor {
 .icon {
   color: white;
   font-size: 3rem;
+  padding: 1rem;
+  background-image: url('../img/discography/sentimental.jpg')
+}
+
+/* STYLING THE PAYPAL ICON FOR SENTIMENTAL MEMORIES */
+.paypal-btn {
+  border-radius: 5px;
+  display: flex;
+  padding: 0.7rem;
+  cursor: pointer;
+}
+
+.paypal-icon {
+  width: 100%;
+  height: 100%;
 }
 
 /* LIGHTBOX */
@@ -333,11 +349,10 @@ a.anchor {
 }
 
 .img-border {
-  padding: .25rem;
   background-color: #f0f0f0;
-  border: 1px solid #f0efef;
   max-width: 100%;
   height: auto;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 .clickable {
