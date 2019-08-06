@@ -34,7 +34,7 @@ const itin2019 = [
     presenter: 'Dallas Chamber Symphony',
     venue: 'Moody Performance Hall',
     link:
-      'https://www.dealyte.com/deal/violinist-chee-yun-plays-the-four-seasons--moody-performance-hall/3129400',
+      'https://artandseek.org/calendar/event/91757/dallas-chamber-symphony-presents-piazzollas-four-seasons',
     location: 'Dallas, TX',
   },
   {
