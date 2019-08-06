@@ -21,6 +21,18 @@ table {
   color: lightgray;
 }
 
+svg {
+  fill: white;
+  width: 40px;
+  height: 40px;
+}
+
+svg:hover,
+svg:active,
+svg:focus {
+  fill: darkgray;
+}
+
 a:not(.navigation) {
   color: rgb(82, 82, 82);
   text-decoration: none;
@@ -165,6 +177,16 @@ nav {
 .btn-dark {
   background-color: rgb(28, 28, 28) !important;
   color: white;
+  border: 2px solid black;
+}
+
+.active,
+.btn-dark:focus,
+.btn-dark:active,
+.btn-dark:hover {
+  background-color: white !important;
+  color: black !important;
+  border: 2px solid black;
 }
 
 .navbar-toggler-icon {

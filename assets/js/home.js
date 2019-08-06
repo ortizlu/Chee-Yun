@@ -1,14 +1,16 @@
 const { $ } = window;
 // once the document is ready hide korean and display only english
 // also hide all other tour dates except 2018
-$(function() {
+$(function () {
   $('.english').hide();
   $('.korean').hide();
-  for (let i = 10; i <= 19; i += 1) {
+  for (let i = 10; i <= 20; i += 1) {
     $(`#itin-20${i}`).hide();
   }
   $('#itin-2019').show();
 });
+
+$('.itin-btn:nth-child(2)').addClass('active')
 
 // fixed or unfixed header depending on where you are in the page
 function fixedHeader() {
@@ -24,7 +26,7 @@ function unfixedHeader() {
 }
 
 // fixes glitch where on refresh if you are at the top of the page after the big header, the small header does not show up without scrolling
-const myFunction = function() {
+const myFunction = function () {
   if ($(window).width() > 992) {
     if ($(window).scrollTop() === 0) {
       unfixedHeader();
@@ -37,7 +39,7 @@ const myFunction = function() {
 window.onload = myFunction;
 
 // check for scrolling
-$(window).scroll(function() {
+$(window).scroll(function () {
   // if width greater than 992
   if ($(window).width() > 992) {
     // if scrolling greater than 188
@@ -52,7 +54,7 @@ $(window).scroll(function() {
 });
 
 // check for window width resize
-$(window).resize(function() {
+$(window).resize(function () {
   // if width is more than 992px
   if ($(window).width() > 992) {
     // change header to larger font
@@ -64,29 +66,34 @@ $(window).resize(function() {
 });
 
 // on button click, alternate between english and korean
-$('.eng').click(function() {
+$('.eng').click(function () {
   $('.korean').hide();
   $('.english').show();
 });
 
-$('.kor').click(function() {
+$('.kor').click(function () {
   $('.korean').show();
   $('.english').hide();
 });
 
 // when clicking an itinerary button
-$('.itin-btn').click(function() {
+$('.itin-btn').click(function () {
   // hide all tour dates
-  for (let i = 10; i <= 19; i += 1) {
+  for (let i = 10; i <= 20; i += 1) {
     $(`#itin-20${i}`).hide();
   }
   // show only the tour year clicked
   $(`#itin-${$(this).text()}`).show();
   $('#year').html($(this).text());
+
+  //remove active class from all buttons
+  $('.itin-btn').removeClass('active')
+  //add active class to button
+  $(this).toggleClass('active')
 });
 
 // smooth scrolling when clicking on a link
-$('a').on('click', function(event) {
+$('a').on('click', function (event) {
   // Make sure this.hash has a value before overriding default behavior
   if (this.hash !== '') {
     // Prevent default anchor click behavior
@@ -102,7 +109,7 @@ $('a').on('click', function(event) {
         scrollTop: $(hash).offset().top,
       },
       800,
-      function() {
+      function () {
         // Add hash (#) to URL when done scrolling (default click behavior)
         window.location.hash = hash;
       }
@@ -111,7 +118,7 @@ $('a').on('click', function(event) {
 });
 
 // activate lightbox
-$(document).on('click', '[data-toggle="lightbox"]', function(event) {
+$(document).on('click', '[data-toggle="lightbox"]', function (event) {
   event.preventDefault();
   $(this).ekkoLightbox({
     wrapping: false,
@@ -121,7 +128,7 @@ $(document).on('click', '[data-toggle="lightbox"]', function(event) {
 });
 
 // gather all objects in an array
-const itinAll = [itin2017, itin2018, itin2019];
+const itinAll = [itin2017, itin2018, itin2019, itin2020];
 
 // loop over the itinAll
 for (let j = 0; j < itinAll.length; j += 1) {
@@ -132,7 +139,7 @@ for (let j = 0; j < itinAll.length; j += 1) {
     div.className = 'mb-5';
     let inner = `<p class="event">${itinAll[j][i].event}</p><p class="info">${
       itinAll[j][i].title
-    }`;
+      }`;
 
     // append these details if not empty
     if (itinAll[j][i].conductor) {
@@ -147,7 +154,7 @@ for (let j = 0; j < itinAll.length; j += 1) {
     if (itinAll[j][i].link) {
       inner = `${inner}<br><a href="${
         itinAll[j][i].link
-      }" class="details">Details</a>`;
+        }" class="details">Details</a>`;
     }
 
     // append location, because location should not be empty
@@ -156,6 +163,14 @@ for (let j = 0; j < itinAll.length; j += 1) {
     // store the info for each event inside the div tag
     div.innerHTML = inner;
     // select the year in the HTML and append each new event to the year
-    document.querySelector(`#itin-201${j + 7}`).appendChild(div);
+
+    //if the 3rd year (meaning 2020, select 2020 div on page and append dates to it)
+    if (j >= 3) {
+      document.querySelector(`#itin-20${j + 17}`).appendChild(div);
+      //otherwise if still in the 10's, select that div and append dates to it
+    } else {
+      document.querySelector(`#itin-201${j + 7}`).appendChild(div);
+    }
+
   }
 }
