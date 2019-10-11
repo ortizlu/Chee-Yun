@@ -1,8 +1,8 @@
 const itin2020 = [
   {
     event: 'January 13',
-    title: 'Piazzola Four Seasons',
-    conductor: 'TBC',
+    title: 'Mendelssohn Violin Concerto',
+    conductor: 'Gerard Schwarz',
     presenter: 'The Society of the Four Arts',
     venue: 'Walter S. Gubelmann Auditorium',
     link:
@@ -17,6 +17,15 @@ const itin2020 = [
     venue: 'Walter S. Gubelmann Auditorium',
     link: '',
     location: 'Palm Beach, FL'
+  },
+  {
+    event: 'February 15-22',
+    title: 'Rancho La Puerta Chamber Music Festival',
+    conductor: '',
+    presenter: 'Rancho La Puerta',
+    venue: 'Rancho La Puerta',
+    link: 'https://rancholapuerta.com/chamber-music-festival-2020/',
+    location: 'Tecate, CA'
   },
   {
     event: 'February 29 & March 1',
