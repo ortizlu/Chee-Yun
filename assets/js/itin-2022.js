@@ -77,4 +77,13 @@ const itin2022 = [
     link: '',
     location: 'Dallas, TX'
   },
+  {
+    event: 'June 12',
+    title: 'Souvenirs',
+    conductor: '',
+    presenter: 'Rembrandt Chamber Musicians',
+    venue: 'Nichols Concert Hall',
+    link: 'https://www.rembrandtchambermusicians.org/events/souvenirs/',
+    location: 'Evanston, IL'
+  },
 ];
