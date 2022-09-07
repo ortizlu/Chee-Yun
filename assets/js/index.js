@@ -1,20 +1,37 @@
+/*
+steps to add a year:
+1. change current year if applicable
+2. create a itin-${year}.js file and add dates. Location must always be present but all others are optional
+3. add itin${year} to itinAll below
+4. add corresponding html elements to index.html
+*/
+
 const { $ } = window;
-const currentYear = 22
+const currentYear = 2022;
 // gather all objects in an array (objects are imported at the bottom of the html where the scripts live)
-const itinAll = [itin2017, itin2018, itin2019, itin2020, itin2021, itin2022];
+const itinAll = [
+  itin2017,
+  itin2018,
+  itin2019,
+  itin2020,
+  itin2021,
+  itin2022,
+  itin2023,
+];
 
 // once the document is ready hide korean and display only english
 // also hide all other tour dates except the current year
-$(function() {
+$(function () {
   $(".english").hide();
   $(".korean").hide();
-  for (let i = 10; i <= currentYear; i += 1) {
-    $(`#itin-20${i}`).hide();
+  for (let i = 2010; i <= 2017 + itinAll.length - 1; i++) {
+    $(`#itin-${i}`).hide();
   }
-  $(`#itin-20${currentYear}`).show();
+  $(`#itin-${currentYear}`).show();
+  $("#year").html(`${currentYear}`);
 });
 
-$(".itin-btn:nth-child(1)").addClass("active");
+$(`.btn-${currentYear}`).addClass("active");
 
 // fixed or unfixed header depending on where you are in the page
 function fixedHeader() {
@@ -30,7 +47,7 @@ function unfixedHeader() {
 }
 
 // fixes glitch where on refresh if you are at the top of the page after the big header, the small header does not show up without scrolling
-const myFunction = function() {
+const myFunction = function () {
   if ($(window).width() > 992) {
     if ($(window).scrollTop() === 0) {
       unfixedHeader();
@@ -43,7 +60,7 @@ const myFunction = function() {
 window.onload = myFunction;
 
 // check for scrolling
-$(window).scroll(function() {
+$(window).scroll(function () {
   // if width greater than 992
   if ($(window).width() > 992) {
     // if scrolling greater than 188
@@ -58,7 +75,7 @@ $(window).scroll(function() {
 });
 
 // check for window width resize
-$(window).resize(function() {
+$(window).resize(function () {
   // if width is more than 992px
   if ($(window).width() > 992) {
     // change header to larger font
@@ -70,21 +87,21 @@ $(window).resize(function() {
 });
 
 // on button click, alternate between english and korean
-$(".eng").click(function() {
+$(".eng").click(function () {
   $(".korean").hide();
   $(".english").show();
 });
 
-$(".kor").click(function() {
+$(".kor").click(function () {
   $(".korean").show();
   $(".english").hide();
 });
 
 // when clicking an itinerary button
-$(".itin-btn").click(function() {
+$(".itin-btn").click(function () {
   // hide all tour dates
-  for (let i = 10; i <= currentYear; i += 1) {
-    $(`#itin-20${i}`).hide();
+  for (let i = 2010; i <= 2017 + itinAll.length - 1; i += 1) {
+    $(`#itin-${i}`).hide();
   }
   // show only the tour year clicked
   $(`#itin-${$(this).text()}`).show();
@@ -97,7 +114,7 @@ $(".itin-btn").click(function() {
 });
 
 // smooth scrolling when clicking on a link
-$("a").on("click", function(event) {
+$("a").on("click", function (event) {
   // Make sure this.hash has a value before overriding default behavior
   if (this.hash !== "") {
     // Prevent default anchor click behavior
@@ -110,10 +127,10 @@ $("a").on("click", function(event) {
     // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
     $("html, body").animate(
       {
-        scrollTop: $(hash).offset().top
+        scrollTop: $(hash).offset().top,
       },
       800,
-      function() {
+      function () {
         // Add hash (#) to URL when done scrolling (default click behavior)
         window.location.hash = hash;
       }
@@ -122,12 +139,12 @@ $("a").on("click", function(event) {
 });
 
 // activate lightbox
-$(document).on("click", '[data-toggle="lightbox"]', function(event) {
+$(document).on("click", '[data-toggle="lightbox"]', function (event) {
   event.preventDefault();
   $(this).ekkoLightbox({
     wrapping: false,
     loadingMessage: true,
-    alwaysShowClose: true
+    alwaysShowClose: true,
   });
 });
 

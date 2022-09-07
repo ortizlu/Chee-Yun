@@ -1,0 +1,48 @@
+const itin2023 = [
+  {
+    event: "January 25-29",
+    title: "Concert with cellist Zuill Bailey",
+    conductor: "",
+    presenter: "El Paso Pro Musica",
+    venue: "Fox Fine Arts Recital Hall",
+    link: "",
+    location: "El Paso, TX",
+  },
+  {
+    event: "February 14",
+    title:
+      "The Four Seasons (Vivaldi) & Las Cuatro Estaciones Porteñas (Piazzolla)",
+    conductor: "Scott Speck",
+    presenter: "Chicago Philharmonic Orchestra",
+    venue: "Harris Theatre",
+    link: "",
+    location: "Chicago, IL",
+  },
+  {
+    event: "April 27- May 2",
+    title: "Gala concert by Young Concert Artists (Private Event)",
+    conductor: "",
+    presenter: "Young Concert Artists",
+    venue: "Zankel Hall at Carnegie Hall",
+    link: "https://yca.org/event/yca-season-finale-2023/",
+    location: "NYC, NY",
+  },
+  {
+    event: "June 21-25",
+    title: "TBD",
+    conductor: "",
+    presenter: "TBD",
+    venue: "TBD",
+    link: "",
+    location: "Steamboat, CO",
+  },
+  {
+    event: "June 26 - July 2",
+    title: "TBD",
+    conductor: "",
+    presenter: "TBD",
+    venue: "TBD",
+    link: "",
+    location: "Pyeongchang, Korea",
+  },
+];
