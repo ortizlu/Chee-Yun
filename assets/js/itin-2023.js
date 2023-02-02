@@ -9,6 +9,15 @@ const itin2023 = [
     location: "El Paso, TX",
   },
   {
+    event: "February 5",
+    title: "Lalo Symphonie Espagnole",
+    conductor: "Anthony Parnther",
+    presenter: "Hawaii Symphony Orchestra",
+    venue: "Hawaii Theatre",
+    link: "https://www.myhso.org/concerts/2023-lalo-symphonie-espagnole",
+    location: "Honolulu, HI",
+  },
+  {
     event: "February 14",
     title:
       "The Four Seasons (Vivaldi) & Las Cuatro Estaciones Porteñas (Piazzolla)",
