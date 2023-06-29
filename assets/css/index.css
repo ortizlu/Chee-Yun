@@ -117,7 +117,7 @@ header {
 
 .arrow-down {
   font-size: 100px;
-  color: white;
+  color: white!important;
 }
 
 .arrow-down:hover {

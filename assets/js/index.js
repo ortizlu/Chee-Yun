@@ -17,6 +17,7 @@ const itinAll = [
   itin2021,
   itin2022,
   itin2023,
+  itin2024
 ];
 
 // once the document is ready hide korean and display only english
@@ -168,7 +169,7 @@ for (let j = 0; j < itinAll.length; j += 1) {
       inner = `${inner}<br>Venue: ${itinAll[j][i].venue}`;
     }
     if (itinAll[j][i].link) {
-      inner = `${inner}<br><a href="${itinAll[j][i].link}" class="details">Details</a>`;
+      inner = `${inner}<br><a href="${itinAll[j][i].link}" class="details" target="_blank" rel="noopener noreferrer">Details</a>`;
     }
 
     // append location, because location should not be empty
