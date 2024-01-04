@@ -7,7 +7,7 @@ steps to add a year:
 */
 
 const { $ } = window;
-const currentYear = 2023;
+const currentYear = 2024;
 // gather all objects in an array (objects are imported at the bottom of the html where the scripts live)
 const itinAll = [
   itin2017,
