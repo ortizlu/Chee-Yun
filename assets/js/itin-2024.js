@@ -1,11 +1,11 @@
 const itin2024 = [
   {
-    event: 'February 10',
+    event: 'February 3',
     title: 'Vivaldi’s Four Seasons & Piazzolla’s Las Cuatro Estaciones Porteñas',
     conductor: 'Christopher Zimmerman',
     presenter: 'Fairfax Symphony Orchestra',
     venue: 'Harris Theater',
-    link: 'https://www.fairfaxsymphony.org/february-10-chee-yun-four-seasons',
+    link: 'https://www.fairfaxsymphony.org/february-3-chee-yun-four-seasons',
     location: 'Fairfax, VA',
   },
   {
