@@ -37,7 +37,7 @@ const itin2024 = [
   },
   {
     event: 'May 12',
-    title: 'Mother’s Day Concert with Alessio Bax (Piano) & Brad Gemeinhardt (French Horn))',
+    title: 'Mother’s Day Concert with Alessio Bax (Piano) & Brad Gemeinhardt (French Horn)',
     conductor: '',
     presenter: 'Parlance Chamber Concerts',
     venue: 'West Side Presbyterian Church',
