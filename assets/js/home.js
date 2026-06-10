@@ -17,7 +17,8 @@ const itinAll = [
   itin2021,
   itin2022,
   itin2023,
-  itin2024
+  itin2024,
+  itin2025
 ];
 
 // once the document is ready hide korean and display only english
