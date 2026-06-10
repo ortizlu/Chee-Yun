@@ -108,9 +108,12 @@
   <a class="anchor" id="home"></a>
 
   <section class="hero">
-    <div class="background-image" style="background-image: url(assets/img/hero-large-blurs.jpg);"></div>
+    <div class="hero-slideshow" aria-hidden="true">
+      <div class="hero-slide is-active" style="background-image: url(assets/img/hero-large-blur.jpg);"></div>
+      <div class="hero-slide" style="background-image: url(assets/img/hero-large-blur2.jpg);"></div>
+      <div class="hero-slide" style="background-image: url(assets/img/hero-large-blur3.jpg);"></div>
+    </div>
     <div class="hero-content-area">
-      <div class="background-image" style="background-image: url(assets/img/hero-large-blur3.jpg);"></div>
       <a class="arrow-down" href="#about">&#8964;</a>
     </div>
   </section>
@@ -392,6 +395,7 @@
       <div class="col-lg-12">
         <h2 class="text-center">Concert Dates</h2>
         <div class="lang-control text-center">
+          <a href="#dates" class="btn btn-dark m-2 itin-btn navigation btn-2026">2026</a>
           <a href="#dates" class="btn btn-dark m-2 itin-btn navigation btn-2025">2025</a>
           <a href="#dates" class="btn btn-dark m-2 itin-btn navigation btn-2024">2024</a>
           <a href="#dates" class="btn btn-dark m-2 itin-btn navigation btn-2023">2023</a>
@@ -406,7 +410,10 @@
         <h2 id="year" class="col-sm-12 text-center mb-5">2022</h2>
 
         <!-- <div class="container"> -->
-        <div class="row justify-content-center">
+        <div class="row justify-content-center align-items-start itin-row">
+          <div id="itin-2026" class="col-md-6">
+          </div>
+
           <div id="itin-2025" class="col-md-6">
           </div>
 
@@ -2288,7 +2295,7 @@
 
           </div>
 
-          <div class="col-md-6">
+          <div id="itin-photos" class="col-md-6">
             <img class="pic-margin-first img-fluid img-border" src="assets/img/gallery/47-low.jpg"
               alt="Chee-Yun Playing Violin">
             <img class="pic-margin-both img-fluid img-border" src="assets/img/gallery/40-low.jpg"
@@ -3115,6 +3122,7 @@
   </script>
 
   <!-- ITINERARY OBJECTS -->
+  <script src="assets/js/itin-2026.js" type="text/javascript"></script>
   <script src="assets/js/itin-2025.js" type="text/javascript"></script>
   <script src="assets/js/itin-2024.js" type="text/javascript"></script>
   <script src="assets/js/itin-2023.js" type="text/javascript"></script>

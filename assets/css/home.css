@@ -97,7 +97,18 @@ header {
   max-height: 100vh;
 }
 
-.hero .background-image {
+.hero-slideshow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+  background-color: #050505;
+}
+
+.hero-slide {
   position: absolute;
   top: 0;
   left: 0;
@@ -105,11 +116,18 @@ header {
   height: 100%;
   background-size: cover;
   background-position: 50% 50%;
-  z-index: -1;
   background-color: #050505;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.hero-slide.is-active {
+  opacity: 1;
 }
 
 .hero-content-area {
+  position: relative;
+  z-index: 1;
   opacity: 0;
   margin-top: 50vh;
   animation: 1s slidefade 1s forwards;
@@ -440,6 +458,10 @@ a.itin-anchor {
   visibility: hidden;
 }
 
+.itin-row {
+  align-items: flex-start;
+}
+
 
 /* DISCOGRAPHY */
 .disc {
@@ -553,16 +575,8 @@ footer {
   }
 
   /* HERO */
-  .hero .background-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
+  .hero-slide {
     background-position: 80% 1%;
-    z-index: -1;
-    background-color: #050505;
   }
 
   /* SECTION DIVISIONS */
@@ -589,15 +603,13 @@ footer {
 @media (min-width: 1800px) {
 
   /* HERO */
-  .hero .background-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
+  .hero-slide {
     background-position: 80% 5%;
-    z-index: -1;
-    background-color: #050505;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-slide {
+    transition: none;
   }
 }
