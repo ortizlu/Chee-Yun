@@ -182,16 +182,15 @@ function initHeroSlideshow() {
     return;
   }
 
-  const prefersReducedMotion = window.matchMedia(
-    "(prefers-reduced-motion: reduce)"
-  ).matches;
-
-  if (prefersReducedMotion) {
-    slides.forEach((slide, index) => {
-      slide.classList.toggle("is-active", index === 0);
-    });
-    return;
-  }
+  slides.forEach((slide) => {
+    const imageUrl = slide.style.backgroundImage
+      .replace(/^url\(["']?/, "")
+      .replace(/["']?\)$/, "");
+    if (imageUrl) {
+      const preload = new Image();
+      preload.src = imageUrl;
+    }
+  });
 
   let currentSlide = slides.findIndex((slide) =>
     slide.classList.contains("is-active")
@@ -201,11 +200,16 @@ function initHeroSlideshow() {
     slides[0].classList.add("is-active");
   }
 
-  window.setInterval(() => {
+  const heroSlideDelayMs = 6000;
+
+  const advanceHeroSlide = () => {
     slides[currentSlide].classList.remove("is-active");
     currentSlide = (currentSlide + 1) % slides.length;
     slides[currentSlide].classList.add("is-active");
-  }, 6000);
+    window.setTimeout(advanceHeroSlide, heroSlideDelayMs);
+  };
+
+  window.setTimeout(advanceHeroSlide, heroSlideDelayMs);
 }
 
 // once the document is ready hide korean and display only english

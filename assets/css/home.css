@@ -117,12 +117,24 @@ header {
   background-size: cover;
   background-position: 50% 50%;
   background-color: #050505;
+  background-repeat: no-repeat;
   opacity: 0;
-  transition: opacity 1.5s ease-in-out;
+  visibility: hidden;
+  transition: opacity 1.5s ease-in-out, visibility 0s linear 1.5s;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .hero-slide.is-active {
   opacity: 1;
+  visibility: visible;
+  transition: opacity 1.5s ease-in-out, visibility 0s linear 0s;
+}
+
+@media (max-width: 991px) {
+  .hero-slide-blur {
+    background-position: 75% 50%;
+  }
 }
 
 .hero-content-area {
@@ -180,8 +192,35 @@ nav {
   opacity: 1;
 }
 
-.navbar-nav {
-  float: right;
+@media (min-width: 992px) {
+  .navbar-nav {
+    float: right;
+  }
+}
+
+@media (max-width: 991px) {
+  .navbar-collapse {
+    width: 100%;
+  }
+
+  .navbar-nav {
+    float: none;
+    width: 100%;
+    margin: 0;
+    padding: 0.5rem 0;
+    text-align: center;
+  }
+
+  .navbar-nav .nav-item {
+    width: 100%;
+  }
+
+  .navbar-nav .nav-link {
+    display: block;
+    width: 100%;
+    padding: 0.875rem 1rem;
+    text-align: center;
+  }
 }
 
 .navbar-brand {
@@ -610,6 +649,10 @@ footer {
 
 @media (prefers-reduced-motion: reduce) {
   .hero-slide {
+    transition: none;
+  }
+
+  .hero-slide.is-active {
     transition: none;
   }
 }
