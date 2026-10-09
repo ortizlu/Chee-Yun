@@ -126,6 +126,65 @@ const itin2026 = [
     location: 'Alexandria, VA',
   },
   {
+    event: 'October 8',
+    title: 'Private concert with Sejong Soloists',
+    conductor: '',
+    presenter: 'Sejong Soloists',
+    venue: '',
+    link: '',
+    location: 'Beacon, NY',
+  },
+  {
+    event: 'October 10',
+    title:
+      "Insang Yun's Images (with Sejong Soloists)<br>Featured artists: Chee-Yun (violin), Sooyun Kim (flute), Noah Kay (oboe), Gaeun Kim (cello)",
+    conductor: '',
+    presenter: 'Dia Beacon',
+    venue: '',
+    link: '',
+    location: 'Beacon, NY',
+  },
+  {
+    event: 'October 27',
+    title:
+      'Sejong Soloists Young Artists Chamber Music Series<br>Hosted and curated by Chee-Yun.<br>Featured artists: Lun Li (violin), Juhee Lim (piano)<br>Repertoire: works by Bach, Ysaye, Prokofiev, Chopin, and Franck',
+    conductor: '',
+    presenter: 'Sejong Soloists',
+    venue: 'Kosciuszko Foundation',
+    link: '',
+    location: 'New York, NY',
+  },
+  {
+    event: 'November 28',
+    title:
+      'Sejong Soloists Chamber Music Series<br>Featured artists: Iestyn Davies (counter-tenor), Donghoon Shin<br>Repertoire: works by Donghoon Shin, Beethoven, and Janáček',
+    conductor: '',
+    presenter: 'Sejong Soloists',
+    venue: 'Seosomun Shrine History Museum, Consolation Hall',
+    link: '',
+    location: 'Seoul, Korea',
+  },
+  {
+    event: 'December 1',
+    title:
+      'Sejong Soloists Chamber Music Series<br>Repertoire: Schubert C major quintet',
+    conductor: '',
+    presenter: 'Sejong Soloists',
+    venue: 'TBD',
+    link: '',
+    location: 'Busan, Korea',
+  },
+  {
+    event: 'December 2',
+    title:
+      'Sejong Soloists Chamber Music Series<br>Repertoire: Schubert C major quintet',
+    conductor: '',
+    presenter: 'Sejong Soloists',
+    venue: 'Ilshin Hall',
+    link: '',
+    location: 'Seoul, Korea',
+  },
+  {
     event: 'December 20',
     title: 'Recital with pianist Ellen Hwangbo',
     conductor: '',
