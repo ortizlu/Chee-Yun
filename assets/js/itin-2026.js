@@ -141,7 +141,7 @@ const itin2026 = [
     conductor: '',
     presenter: 'Dia Beacon',
     venue: '',
-    link: '',
+    link: 'https://www.sejongsolo.org/en/project/performance/22',
     location: 'Beacon, NY',
   },
   {
@@ -151,7 +151,7 @@ const itin2026 = [
     conductor: '',
     presenter: 'Sejong Soloists',
     venue: 'Kosciuszko Foundation',
-    link: '',
+    link: 'https://www.sejongsolo.org/en/project/performance/20',
     location: 'New York, NY',
   },
   {
@@ -161,7 +161,7 @@ const itin2026 = [
     conductor: '',
     presenter: 'Sejong Soloists',
     venue: 'Seosomun Shrine History Museum, Consolation Hall',
-    link: '',
+    link: 'https://www.sejongsolo.org/en/project/performance/24',
     location: 'Seoul, Korea',
   },
   {

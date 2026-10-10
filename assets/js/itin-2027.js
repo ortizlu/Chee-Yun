@@ -5,7 +5,7 @@ const itin2027 = [
     conductor: 'Daniel Meyer',
     presenter: 'Erie Philharmonic',
     venue: 'Warner Theatre',
-    link: '',
+    link: 'https://www.eriephil.org/calendar/four-seasons',
     location: 'Erie, PA',
   },
   {
@@ -15,7 +15,7 @@ const itin2027 = [
     conductor: 'Scott Speck',
     presenter: 'Mobile Symphony',
     venue: 'Saenger Theatre',
-    link: '',
+    link: 'https://mobilesymphony.org/event/four-seasons-2',
     location: 'Mobile, AL',
   },
   {
@@ -25,7 +25,7 @@ const itin2027 = [
     conductor: 'Scott Speck',
     presenter: 'Mobile Symphony',
     venue: 'Saenger Theatre',
-    link: '',
+    link: 'https://mobilesymphony.org/event/four-seasons-2',
     location: 'Mobile, AL',
   },
 ];
